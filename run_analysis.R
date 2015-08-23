@@ -10,6 +10,8 @@ y_train<-read.table("y_train.txt")
 Train<-cbind(y_train, X_train)
 Train[,563] = read.csv("subject_train.txt", sep="", header=FALSE)
 
+activity_labels = read.csv("activity_labels.txt", sep="", header=FALSE)
+
 # Read features and make the feature names better suited for R with some substitutions
 
 features = read.table("features.txt")
