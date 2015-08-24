@@ -2,12 +2,12 @@
 
 X_test<-read.table("X_test.txt")
 y_test<-read.table("y_test.txt")
-Test<-cbind(y_test, X_test)
+Test<-cbind(X_test, y_test)
 Test[,563] = read.table("subject_test.txt")
 
 X_train<-read.table("X_train.txt")
 y_train<-read.table("y_train.txt")
-Train<-cbind(y_train, X_train)
+Train<-cbind(X_train, y_train)
 Train[,563] = read.csv("subject_train.txt", sep="", header=FALSE)
 
 activity_labels = read.csv("activity_labels.txt", sep="", header=FALSE)
